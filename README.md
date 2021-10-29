@@ -9,3 +9,7 @@ https://docs.google.com/document/d/1kBaLexGJiT63it-8C2ky0zlIxC0uPGKxjeU16PIYPJ8/
 ## Presentation
 
 https://docs.google.com/presentation/d/1z48TLVZxkCpwxweCGI0f2b9b-KekgY8QjbsyELIM9nw/edit?usp=sharing
+
+## LPOO Example
+
+https://web.fe.up.pt/~arestivo/page/exercises/unit-testing/
