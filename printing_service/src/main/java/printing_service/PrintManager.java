@@ -11,13 +11,17 @@ public class PrintManager {
 
     /**
      * Sorts the documents waiting to be printed by their priority.
-     *
-     * @return A list of documents sorted by priority.
      */
     void sortDocumentsByPriority (List<Document> documents) {
         Collections.sort(documents);
     }
 
+    /**
+     * Calculates the total printing capacity, that is, the number of pages that can be printed attending to the
+     * printers available and their capacity.
+     * 
+     * @return The total number of pages that can be printed.
+     */
     int calculateTotalPrintingCapacity (List<Printer> printers) {
 
         int total = 0;
