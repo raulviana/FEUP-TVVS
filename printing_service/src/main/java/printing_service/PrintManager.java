@@ -1,6 +1,7 @@
 package printing_service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,15 +10,36 @@ import java.util.List;
 public class PrintManager {
 
     /**
+     * Sorts the documents waiting to be printed by their priority.
+     *
+     * @return A list of documents sorted by priority.
+     */
+    void sortDocumentsByPriority (List<Document> documents) {
+        Collections.sort(documents);
+    }
+
+    int calculateTotalPrintingCapacity (List<Printer> printers) {
+
+        int total = 0;
+
+        for (Printer p: printers
+             ) {
+            total += p.capacity;
+        }
+
+        return total;
+    }
+
+    /**
      * Calculates the percentage of documents that will be printed according to the printers available.
      *
      * @return The percentage of documents that will be printed.
      */
     int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
 
-        int counter = 0;
+        int percentage = 0;
 
-        return counter;
+        return percentage;
     }
 
     /**
