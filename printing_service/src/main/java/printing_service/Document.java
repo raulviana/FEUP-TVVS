@@ -19,12 +19,18 @@ public class Document implements Comparable<Document>{
     }
 
     @Override public int compareTo(Document doc) {
+
+        if (this.priority == doc.priority) {
+            System.out.println(this.priority);
+            return Integer.compare(this.id, doc.id);
+        }
+
         return Integer.compare(this.priority, doc.priority);
     }
 
     @Override
     public String toString() {
-        return "Document{" +
+        return "Document {" +
                 "id=" + id +
                 ", priority=" + priority +
                 ", num_pages=" + num_pages +

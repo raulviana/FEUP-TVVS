@@ -16,4 +16,13 @@ public class Printer {
         this.id = id;
         this.capacity = capacity;
     }
+
+    @Override
+    public String toString() {
+        return "Printer {" +
+                "id=" + id +
+                ", capacity=" + capacity +
+                '}';
+    }
+
 }
