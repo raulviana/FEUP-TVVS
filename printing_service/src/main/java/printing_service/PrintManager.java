@@ -28,7 +28,7 @@ public class PrintManager {
 
         for (Printer p: printers
              ) {
-            total += p.capacity;
+            total += p.getCapacity();
         }
 
         return total;
@@ -42,8 +42,8 @@ public class PrintManager {
     /*
     int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
 
-        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.num_pages).sum();
-        int capacity = printers.stream().mapToInt(printer -> printer.capacity).sum();
+        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
+        int capacity = printers.stream().mapToInt(printer -> printer.getCapacity()).sum();
 
         return capacity * 100 / numPagesToPrint;
     }
@@ -53,8 +53,8 @@ public class PrintManager {
     /*
     int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
 
-        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.num_pages).sum();
-        int capacity = printers.stream().mapToInt(printer -> printer.capacity).sum();
+        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
+        int capacity = printers.stream().mapToInt(printer -> printer.getCapacity()).sum();
 
         if(numPagesToPrint == 0) return 0;
 
@@ -75,12 +75,12 @@ public class PrintManager {
     List<Integer> missingDocuments(List<Document> documents, List<Printer> printers) {
 
         List<Integer> result = new ArrayList<>();
-        int capacity = printers.stream().mapToInt(printer -> printer.capacity).sum();
+        int capacity = printers.stream().mapToInt(printer -> printer.getCapacity()).sum();
 
         this.sortDocumentsByPriority(documents);
 
         for(Document doc : documents) {
-            capacity -= doc.num_pages;
+            capacity -= doc.getNumPages();
 
             if(capacity < 0) result.add(doc.id);
         }
@@ -98,14 +98,14 @@ public class PrintManager {
     List<Printer> unusedPrinters(List<Document> documents, List<Printer> printers) {
 
         List<Printer> result = new ArrayList<>();
-        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.num_pages).sum();
+        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
 
         this.sortDocumentsByPriority(documents);
 
         for(Printer printer : printers) {
-            numPagesToPrint -= printer.capacity;
+            numPagesToPrint -= printer.getCapacity();
 
-            if(numPagesToPrint < 0 && Math.abs(numPagesToPrint) >= printer.capacity) result.add(printer);
+            if(numPagesToPrint < 0 && Math.abs(numPagesToPrint) >= printer.getCapacity()) result.add(printer);
         }
 
         return result;

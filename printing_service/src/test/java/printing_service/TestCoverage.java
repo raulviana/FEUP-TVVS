@@ -180,7 +180,7 @@ public class TestCoverage {
         Document doc = new Document(1, 3, 4);
         Printer printer = new Printer(1, 3);
 
-        Assertions.assertEquals("Document {id=1, priority=3, num_pages=4}", doc.toString());
+        Assertions.assertEquals("Document {id=1, priority=3, numPages=4}", doc.toString());
         Assertions.assertEquals("Printer {id=1, capacity=3}", printer.toString());
     }
 }

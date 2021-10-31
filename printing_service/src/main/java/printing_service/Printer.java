@@ -5,8 +5,8 @@ package printing_service;
  */
 public class Printer {
 
-    int id;
-    int capacity;
+    private int id;
+    private int capacity;
 
     /**
      * Class constructor specifying the printer id and its capacity.
@@ -26,4 +26,8 @@ public class Printer {
     }
 
     public int getCapacity() {return this.capacity;}
+
+    public int getId() {
+        return id;
+    }
 }

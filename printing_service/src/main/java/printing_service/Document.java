@@ -5,9 +5,9 @@ package printing_service;
  */
 public class Document implements Comparable<Document>{
 
-    int id;
-    int priority;
-    int num_pages;
+    private int id;
+    private int priority;
+    private int numPages;
 
     /**
      * Class constructor specifying the document id, priority in the list and number of pages.
@@ -15,17 +15,17 @@ public class Document implements Comparable<Document>{
     public Document(int id, int priority, int pages) {
         this.id = id;
         this.priority = priority;
-        this.num_pages = pages;
+        this.numPages = pages;
     }
 
     @Override public int compareTo(Document doc) {
 
-        if (this.priority == doc.priority) {
+        if (this.priority == doc.getPriority()) {
             System.out.println(this.priority);
-            return Integer.compare(this.id, doc.id);
+            return Integer.compare(this.id, doc.getId());
         }
 
-        return Integer.compare(this.priority, doc.priority);
+        return Integer.compare(this.priority, doc.getPriority());
     }
 
     @Override
@@ -33,7 +33,19 @@ public class Document implements Comparable<Document>{
         return "Document {" +
                 "id=" + id +
                 ", priority=" + priority +
-                ", num_pages=" + num_pages +
+                ", numPages=" + numPages +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public int getNumPages() {
+        return numPages;
     }
 }

@@ -1,40 +1,44 @@
 package printing_service;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.anyList;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-@RunWith(MockitoJUnitRunner.class)
 public class Mockit {
 
-        private PrintManager manager = new PrintManager();
+    Printer printer1;
+    Printer printer2;
 
-        private List<Printer> printers = new ArrayList<>();
+    private final PrintManager manager = new PrintManager();
 
-        @Mock Printer printer1 = new Printer(1, 1);
-        @Mock Printer printer2 = new Printer(2, 1);
-        @Mock PrintManager manager2 = new PrintManager();
+    private List<Printer> printers;
 
-        @Test
-        public void testTotalPrintingCapacity() {
-            printers.add(printer1);
-            printers.add(printer2);
-            Mockito.when(printer1.getCapacity()).thenReturn(5);
-            Mockito.when(printer2.getCapacity()).thenReturn(10);
-            assertEquals(15, manager.calculateTotalPrintingCapacity(printers));
-        }
+    @BeforeEach
+    public void setup() {
+        printer1 = Mockito.mock(Printer.class);
+        printer2 = Mockito.mock(Printer.class);
 
+        when(printer1.getCapacity()).thenReturn(5);
+        when(printer2.getCapacity()).thenReturn(10);
+        printers = Arrays.asList(printer1, printer2);
     }
+
+    @Test
+    public void testTotalPrintingCapacity() {
+
+        assertEquals(15, manager.calculateTotalPrintingCapacity(printers));
+        Mockito.verify(printer1, Mockito.times(1)).getCapacity();
+        Mockito.verify(printer2, Mockito.times(1)).getCapacity();
+    }
+
+}
 
