@@ -25,4 +25,5 @@ public class Printer {
                 '}';
     }
 
+    public int getCapacity() {return this.capacity;}
 }
