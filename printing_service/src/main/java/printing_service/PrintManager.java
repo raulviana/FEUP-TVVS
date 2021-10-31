@@ -49,6 +49,21 @@ public class PrintManager {
     }
      */
 
+    // TODO: Remove this method for workshop
+    /*
+    int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
+
+        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.num_pages).sum();
+        int capacity = printers.stream().mapToInt(printer -> printer.capacity).sum();
+
+        if(numPagesToPrint == 0) return 0;
+
+        if(capacity >= numPagesToPrint) return 100;
+
+        return capacity * 100 / numPagesToPrint;
+    }
+     */
+
     // TODO: Make this method empty for workshop
     /**
      * Obtain a list with the ids of the documents that the printing service will not be able to print, according

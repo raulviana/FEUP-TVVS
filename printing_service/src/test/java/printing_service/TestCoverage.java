@@ -23,6 +23,8 @@ public class TestCoverage {
     int totalPrintingCapacity = 7;
     List<Printer> printers = Arrays.asList(printer1, printer2, printer3, printer4);
 
+    // TODO: Hide the following block for exercise 1
+    /*
     @Test
     public void testSortDocuments() {
 
@@ -42,6 +44,7 @@ public class TestCoverage {
 
         Assertions.assertEquals(totalPrintingCapacity, actual);
     }
+     */
 
     // Uncomment the following block for exercise 2
     /*
