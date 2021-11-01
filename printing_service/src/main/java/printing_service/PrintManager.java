@@ -39,7 +39,7 @@ public class PrintManager {
      *
      * @return The percentage of documents that will be printed.
      */
-    /*
+
     int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
 
         int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
@@ -47,7 +47,7 @@ public class PrintManager {
 
         return capacity * 100 / numPagesToPrint;
     }
-     */
+
 
     // TODO: Remove this method for workshop
     /*
