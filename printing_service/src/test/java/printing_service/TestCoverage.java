@@ -54,7 +54,7 @@ public class TestCoverage {
     }*/
 
 
-    // TODO: Hide the following block for exercise 3
+    // TODO: Hide the following block for exercise 2
 
     /*@Test
     public void testSatisfiedPrintingPercentage_zeroPrintingCapacity() {
@@ -74,7 +74,7 @@ public class TestCoverage {
         Assertions.assertEquals(0, actual);
     }*/
 
-    // Uncomment the following block for exercise 4
+    // Uncomment the following block for exercise 3
 
     /*@Test
     public void testMissingDocuments() {
@@ -119,7 +119,7 @@ public class TestCoverage {
     }*/
 
 
-    // Uncomment the following block for exercise 5
+    // Uncomment the following block for exercise 4
     /*
     @Test
     public void testUnusedPrinters() {
@@ -135,7 +135,7 @@ public class TestCoverage {
     }
     */
 
-    // TODO: Following block is the solution for exercise 4
+    // TODO: Following block is the solution for exercise 3
 
     /*@Test
     public void testUnusedPrinters() {
