@@ -23,32 +23,10 @@ public class TestCoverage {
     int totalPrintingCapacity = 7;
     List<Printer> printers = Arrays.asList(printer1, printer2, printer3, printer4);
 
-    // TODO: Hide the following block for exercise 1
-    /*
-    @Test
-    public void testSortDocuments() {
 
-        List<Document> expected = Arrays.asList(doc2, doc4, doc3, doc1);
+    // Uncomment the following block for exercise 1
 
-        PrintManager pm = new PrintManager();
-        pm.sortDocumentsByPriority(docs);
-
-        Assertions.assertEquals(expected, docs);
-    }
-
-    @Test
-    public void testTotalPrintingCapacity() {
-
-        PrintManager pm = new PrintManager();
-        int actual = pm.calculateTotalPrintingCapacity(printers);
-
-        Assertions.assertEquals(totalPrintingCapacity, actual);
-    }
-     */
-
-    // Uncomment the following block for exercise 2
-    /*
-    @Test
+    /*@Test
     public void testSatisfiedPrintingPercentage() {
 
         PrintManager pm = new PrintManager();
@@ -56,12 +34,12 @@ public class TestCoverage {
         int expected = totalPrintingCapacity * 100 / totalPagesToBePrinted;
 
         Assertions.assertEquals(expected, actual);
-    }
-    */
+    }*/
 
-    // TODO: Hide the following block for exercise 2
-    /*
-    @Test
+
+    // TODO: Hide the following block for exercise 1
+
+    /*@Test
     public void testSatisfiedPrintingPercentage_exceedingPrintingCapacity() {
 
         PrintManager pm = new PrintManager();
@@ -73,12 +51,12 @@ public class TestCoverage {
                         .collect(Collectors.toList()));
 
         Assertions.assertEquals(100, actual);
-    }
-    */
+    }*/
+
 
     // TODO: Hide the following block for exercise 3
-    /*
-    @Test
+
+    /*@Test
     public void testSatisfiedPrintingPercentage_zeroPrintingCapacity() {
 
         PrintManager pm = new PrintManager();
@@ -94,17 +72,16 @@ public class TestCoverage {
         int actual = pm.satisfiedPrintingPercentage(Collections.emptyList(), printers);
 
         Assertions.assertEquals(0, actual);
-    }
-    */
+    }*/
 
     // Uncomment the following block for exercise 4
-    /*
-    @Test
+
+    /*@Test
     public void testMissingDocuments() {
 
         PrintManager pm = new PrintManager();
         List<Integer> actual = pm.missingDocuments(docs, printers);
-        List<Integer> expected = Arrays.asList(3, 1);
+        List<Integer> expected = Arrays.asList(3, 1, 4);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -117,7 +94,7 @@ public class TestCoverage {
                 printers.stream(),
                 Stream.of(new Printer(5, 1)))
                 .collect(Collectors.toList()));
-        List<Integer> expected = Arrays.asList(3, 1);
+        List<Integer> expected = Arrays.asList(3, 1, 4);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -127,7 +104,7 @@ public class TestCoverage {
 
         PrintManager pm = new PrintManager();
         List<Integer> actual = pm.missingDocuments(docs, Collections.emptyList());
-        List<Integer> expected = Arrays.asList(2, 4, 3, 1);
+        List<Integer> expected = Arrays.asList(2, 3, 1, 4);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -139,8 +116,8 @@ public class TestCoverage {
         List<Integer> actual = pm.missingDocuments(Collections.emptyList(), printers);
 
         Assertions.assertEquals(Collections.emptyList(), actual);
-    }
-     */
+    }*/
+
 
     // Uncomment the following block for exercise 5
     /*
@@ -159,8 +136,8 @@ public class TestCoverage {
     */
 
     // TODO: Following block is the solution for exercise 4
-    /*
-    @Test
+
+    /*@Test
     public void testUnusedPrinters() {
 
         Printer unusedPrinter = new Printer(5, 100);
@@ -172,6 +149,6 @@ public class TestCoverage {
         List<Printer> expected = Arrays.asList(unusedPrinter);
 
         Assertions.assertEquals(expected, actual);
-    }
-     */
+    }*/
+
 }
