@@ -28,6 +28,10 @@ public class Document implements Comparable<Document>{
         return Integer.compare(this.priority, doc.getPriority());
     }
 
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     public int getId() {
         return id;
     }

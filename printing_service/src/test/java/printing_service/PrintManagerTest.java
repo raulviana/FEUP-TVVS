@@ -166,4 +166,18 @@ public class PrintManagerTest {
         Assertions.assertEquals(expected, actual);
     }*/
 
+
+    @Test
+    public void testCoverage() {
+
+        doc4.setPriority(1);
+        PrintManager pm = new PrintManager();
+        pm.sortDocumentsByPriority(docs);
+
+        List<Document> expected = Arrays.asList(doc2, doc4, doc3, doc1);
+
+        Assertions.assertEquals(expected, docs);
+    }
+
+
 }
