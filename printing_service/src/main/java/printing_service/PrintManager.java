@@ -82,7 +82,7 @@ public class PrintManager {
         for(Document doc : documents) {
             capacity -= doc.getNumPages();
 
-            if(capacity < 0) result.add(doc.id);
+            if(capacity < 0) result.add(doc.getId());
         }
 
         return result;

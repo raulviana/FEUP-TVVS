@@ -11,7 +11,7 @@ public class TestCoverage {
     Document doc1 = new Document(1, 3, 4);
     Document doc2 = new Document(2, 1, 3);
     Document doc3 = new Document(3, 2, 7);
-    Document doc4 = new Document(4, 1, 2);
+    Document doc4 = new Document(4, 4, 2);
     int totalPagesToBePrinted = 16;
     List<Document> docs = Arrays.asList(doc1, doc2, doc3, doc4);
 

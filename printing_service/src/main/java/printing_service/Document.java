@@ -28,15 +28,6 @@ public class Document implements Comparable<Document>{
         return Integer.compare(this.priority, doc.getPriority());
     }
 
-    @Override
-    public String toString() {
-        return "Document {" +
-                "id=" + id +
-                ", priority=" + priority +
-                ", numPages=" + numPages +
-                '}';
-    }
-
     public int getId() {
         return id;
     }
