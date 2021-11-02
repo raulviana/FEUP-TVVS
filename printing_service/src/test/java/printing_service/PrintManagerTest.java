@@ -6,7 +6,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.mockito.Mockito.when;
 
@@ -29,7 +32,6 @@ public class PrintManagerTest {
 
     // TODO: Hide the following block for exercise 1
     /*
-    @BeforeEach
     public void setup() {
         doc1 = Mockito.mock(Document.class);
         doc2 = Mockito.mock(Document.class);
@@ -48,16 +50,19 @@ public class PrintManagerTest {
     @Test
     public void testSatisfiedPrintingPercentage() {
 
+        this.setup();
         PrintManager pm = new PrintManager();
         int actual = pm.satisfiedPrintingPercentage(docs, printers);
         int expected = totalPrintingCapacity * 100 / totalPagesToBePrinted;
 
         Assertions.assertEquals(expected, actual);
-    }*/
+    }
+     */
 
 
     // TODO: Hide the following block for exercise 2
-    /*@Test
+    /*
+    @Test
     public void testSatisfiedPrintingPercentage_exceedingPrintingCapacity() {
 
         PrintManager pm = new PrintManager();
@@ -69,11 +74,13 @@ public class PrintManagerTest {
                         .collect(Collectors.toList()));
 
         Assertions.assertEquals(100, actual);
-    }*/
+    }
+     */
 
 
     // TODO: Hide the following block for exercise 3
-    /*@Test
+    /*
+    @Test
     public void testSatisfiedPrintingPercentage_zeroPrintingCapacity() {
 
         PrintManager pm = new PrintManager();
@@ -89,10 +96,10 @@ public class PrintManagerTest {
         int actual = pm.satisfiedPrintingPercentage(Collections.emptyList(), printers);
 
         Assertions.assertEquals(0, actual);
-    }*/
+    }
 
     // Uncomment the following block for exercise 4
-    /*@Test
+    @Test
     public void testMissingDocuments() {
 
         PrintManager pm = new PrintManager();
@@ -132,7 +139,8 @@ public class PrintManagerTest {
         List<Integer> actual = pm.missingDocuments(Collections.emptyList(), printers);
 
         Assertions.assertEquals(Collections.emptyList(), actual);
-    }*/
+    }
+     */
 
 
     // Uncomment the following block for exercise 5
@@ -143,27 +151,28 @@ public class PrintManagerTest {
         PrintManager pm = new PrintManager();
         List<Integer> actual = pm.missingDocuments(docs, Stream.concat(
                 printers.stream(),
-                Stream.of(new Printer(5, 12), new Printer(5, 100)))
+                Stream.of(new Printer(5, 12), new Printer(6, 100)))
                 .collect(Collectors.toList()));
-        List<Printer> expected = Arrays.asList(new Printer(5, 100));
+        List<Printer> expected = Arrays.asList(new Printer(6, 100));
 
         Assertions.assertEquals(expected, actual);
-    }
-    */
+    }*/
 
     // TODO: Following block is the solution for exercise 5
-    /*@Test
+    /*
+    @Test
     public void testUnusedPrinters() {
 
-        Printer unusedPrinter = new Printer(5, 100);
+        Printer unusedPrinter = new Printer(6, 100);
         PrintManager pm = new PrintManager();
         List<Printer> actual = pm.unusedPrinters(docs, Stream.concat(
                 printers.stream(),
-                Stream.of(new Printer(5, 12), unusedPrinter))
+                Stream.of(new Printer(5, 20), unusedPrinter))
                 .collect(Collectors.toList()));
         List<Printer> expected = Arrays.asList(unusedPrinter);
 
         Assertions.assertEquals(expected, actual);
-    }*/
+    }
+     */
 
 }

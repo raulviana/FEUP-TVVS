@@ -21,7 +21,6 @@ public class Document implements Comparable<Document>{
     @Override public int compareTo(Document doc) {
 
         if (this.priority == doc.getPriority()) {
-            System.out.println(this.priority);
             return Integer.compare(this.id, doc.getId());
         }
 
