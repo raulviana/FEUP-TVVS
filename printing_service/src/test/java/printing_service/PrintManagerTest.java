@@ -1,12 +1,16 @@
 package printing_service;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class TestCoverage {
+import static org.mockito.Mockito.when;
+
+public class PrintManagerTest {
 
     Document doc1 = new Document(1, 3, 4);
     Document doc2 = new Document(2, 1, 3);
@@ -23,10 +27,25 @@ public class TestCoverage {
     int totalPrintingCapacity = 7;
     List<Printer> printers = Arrays.asList(printer1, printer2, printer3, printer4);
 
+    // TODO: Hide the following block for exercise 1
+    /*
+    @BeforeEach
+    public void setup() {
+        doc1 = Mockito.mock(Document.class);
+        doc2 = Mockito.mock(Document.class);
+        doc3 = Mockito.mock(Document.class);
+        doc4 = Mockito.mock(Document.class);
+
+        when(doc1.getNumPages()).thenReturn(4);
+        when(doc2.getNumPages()).thenReturn(3);
+        when(doc3.getNumPages()).thenReturn(7);
+        when(doc4.getNumPages()).thenReturn(2);
+        docs = Arrays.asList(doc1, doc2, doc3, doc4);
+    }*/
 
     // Uncomment the following block for exercise 1
-
-    /*@Test
+    /*
+    @Test
     public void testSatisfiedPrintingPercentage() {
 
         PrintManager pm = new PrintManager();
@@ -37,8 +56,7 @@ public class TestCoverage {
     }*/
 
 
-    // TODO: Hide the following block for exercise 1
-
+    // TODO: Hide the following block for exercise 2
     /*@Test
     public void testSatisfiedPrintingPercentage_exceedingPrintingCapacity() {
 
@@ -54,8 +72,7 @@ public class TestCoverage {
     }*/
 
 
-    // TODO: Hide the following block for exercise 2
-
+    // TODO: Hide the following block for exercise 3
     /*@Test
     public void testSatisfiedPrintingPercentage_zeroPrintingCapacity() {
 
@@ -74,8 +91,7 @@ public class TestCoverage {
         Assertions.assertEquals(0, actual);
     }*/
 
-    // Uncomment the following block for exercise 3
-
+    // Uncomment the following block for exercise 4
     /*@Test
     public void testMissingDocuments() {
 
@@ -119,7 +135,7 @@ public class TestCoverage {
     }*/
 
 
-    // Uncomment the following block for exercise 4
+    // Uncomment the following block for exercise 5
     /*
     @Test
     public void testUnusedPrinters() {
@@ -135,8 +151,7 @@ public class TestCoverage {
     }
     */
 
-    // TODO: Following block is the solution for exercise 3
-
+    // TODO: Following block is the solution for exercise 5
     /*@Test
     public void testUnusedPrinters() {
 

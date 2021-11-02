@@ -37,6 +37,6 @@ public class Document implements Comparable<Document>{
     }
 
     public int getNumPages() {
-        return numPages;
+        return numPages + 1;
     }
 }
