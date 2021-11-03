@@ -22,18 +22,17 @@ public class PrintManager {
      *
      * @return The total number of pages that can be printed.
      */
-    /*
     int calculateTotalPrintingCapacity (List<Printer> printers) {
 
         int total = 0;
 
         for (Printer p: printers
-             ) {
+        ) {
             total += p.getCapacity();
         }
 
         return total;
-    }*/
+    }
 
     /**
      * Calculates the percentage of documents that will be printed according to the printers availability.
@@ -41,17 +40,6 @@ public class PrintManager {
      * @return The percentage of documents that will be printed.
      */
 
-    /*int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
-
-        int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
-        int capacity = printers.stream().mapToInt(printer -> printer.getCapacity()).sum();
-
-        return capacity * 100 / numPagesToPrint;
-    }*/
-
-
-    // TODO: Remove this method for workshop
-    /*
     int satisfiedPrintingPercentage(List<Document> documents, List<Printer> printers) {
 
         int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
@@ -63,16 +51,13 @@ public class PrintManager {
 
         return capacity * 100 / numPagesToPrint;
     }
-     */
 
-    // TODO: Make this method empty for workshop
     /**
      * Obtain a list with the ids of the documents that the printing service will not be able to print, according
      * to the printers available.
      *
      * @return A list containing the ids of the documents that will not be printed by the printing service.
      */
-    /*
     List<Integer> missingDocuments(List<Document> documents, List<Printer> printers) {
 
         List<Integer> result = new ArrayList<>();
@@ -88,14 +73,12 @@ public class PrintManager {
 
         return result;
     }
-    */
 
     /**
      * Obtain a list with the ids of the printers that will not be used to satisfy the printing service.
      *
      * @return A list containing the ids of the printers that will not be used by the printing service.
      */
-    /*
     List<Printer> unusedPrinters(List<Document> documents, List<Printer> printers) {
 
         int numPagesToPrint = documents.stream().mapToInt(doc -> doc.getNumPages()).sum();
@@ -111,5 +94,4 @@ public class PrintManager {
 
         return Collections.emptyList();
     }
-    */
 }
