@@ -1,6 +1,6 @@
-# FEUP-TVVS
+# FEUP-TVVS-TUTORIAL-SOLUTIONS
 
-Repository for the Software Test Validation and Verification course
+Repository with the tutorial solutions code for the Software Test Validation and Verification course.
 
 ## Instalation Instructions
 
@@ -12,8 +12,4 @@ https://docs.google.com/document/d/1osc0DWxh0J67qQDwreVBsFJj6B4XABbdFzUfPz__J-0/
 
 ## Presentation
 
-https://docs.google.com/presentation/d/1z48TLVZxkCpwxweCGI0f2b9b-KekgY8QjbsyELIM9nw/edit?usp=sharing
-
-## LPOO Example
-
-https://web.fe.up.pt/~arestivo/page/exercises/unit-testing/
+https://docs.google.com/presentation/d/1bEH_Gqa8jO8HmmlWVzcDRLmkR4C-KXLHGhg2ssThSmk/present?slide=id.p
