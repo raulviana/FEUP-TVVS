@@ -1,6 +1,6 @@
 # FEUP-TVVS-TUTORIAL-SOLUTIONS
 
-Repository with the tutorial solutions code for the Software Test Validation and Verification course.
+Repository with the tutorial solutions code for the Software Test Validation and Verification inverted class.
 
 ## Instalation Instructions
 
